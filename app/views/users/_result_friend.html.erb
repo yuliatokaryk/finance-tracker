@@ -3,12 +3,22 @@
 </div>
 
 <% if @friends %>
-  <% @friends.each do |friend| %>
-    <div class="card card-header result-block">
-      <strong>Email: </strong> <%=  friend.email %> </strong>
+  <div class="card">
+    <div class="card-body">
+    <table>
+      <tr>
+        <th><%= fa_icon 'user' %></th>
+        <td><%= friend.first_name %></td>
+        <td><%= friend.email %></td>
+      </tr>
+        <% @friends.each do |friend| %>
+          <tr>
+            <th><%= fa_icon 'user' %></th>
+            <td><%= friend.first_name %></td>
+            <td><%= friend.email %></td>
+          </tr>
+        <% end %>
+    </table>
     </div>
-    <% if current_user.not_friend_with?(friend.id) %>
-    
-    <% end %>
-    <% end %>
+  </div>
 <% end %>

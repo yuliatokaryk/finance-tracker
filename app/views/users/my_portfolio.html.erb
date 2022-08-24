@@ -1,4 +1,4 @@
-<h1>My portfolio</h1>
+<h1 class="page-title">My portfolio</h1>
 
 <div class='search-area'>
   <h3>Search Stocks</h3>
@@ -7,16 +7,15 @@
       <div class="col-sm-9 no-right-padding">
         <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: true, class: "form-control form-control-lg" %>
       </div>
-
       <div class="col-sm-3 no-left-padding">
-        <%= button_tag type: :submit, class: "btn btn-success" do %>
+        <%= button_tag type: :submit, class: "btn btn-warning" do %>
           <%= fa_icon "search 2x" %>
         <% end %>
       </div>
     </div>
   <% end %>
 </div>
-<%= fa_icon 'user' %>
+
 <div id="results" >
 </div>
 
