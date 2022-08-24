@@ -1,0 +1,14 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Email</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @friends.each do |friend|%>
+      <tr>
+        <th scope="row"><%= friend.email %></th>
+    <% end %>
+  </tbody>
+</table>

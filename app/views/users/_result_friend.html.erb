@@ -1,0 +1,14 @@
+<div class="result-block">
+  <%= render 'layouts/messages'%>
+</div>
+
+<% if @friends %>
+  <% @friends.each do |friend| %>
+    <div class="card card-header result-block">
+      <strong>Email: </strong> <%=  friend.email %> </strong>
+    </div>
+    <% if current_user.not_friend_with?(friend.id) %>
+    
+    <% end %>
+    <% end %>
+<% end %>
